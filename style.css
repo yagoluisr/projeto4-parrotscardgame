@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #EEF9BF;
+        }
+
+        img {
+            height: 100px;
+            width: 100px;
+        }
+
+        .topo {
+            display: flex;
+            justify-content: center;
+        }
+
+        h1 {
+            height: 63px;
+            width: 640px;
+            font-size: 700;
+            font-size: 56px;
+            color: #75B79E;
+        }
+
+        .card {
+            height: 146px;
+            width: 117px;
+            position: relative;
+            margin: 47px auto;
+        }
+
+        .face {
+            width: 100%;
+            height: 100%;
+            background-color: #A7E9AF;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            transition: all .5s;
+            backface-visibility: hidden;
+            transform-style: preserve-3d;
+        }
+        
+        .virarada.frente {
+            
+        } 
+
+        .back-face {
+            width: 100%;
+            height: 100%;
+            background-color: #A7E9AF;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center; 
+            transform: rotateY(180deg);
+        }
+
+        .card.virada .back-face {
+            transform: rotateY(0deg);
+          }
+        
+        .card.virada .frente {
+            transform: rotateY(-180deg);
+          }
+
+        
