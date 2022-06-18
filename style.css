@@ -4,6 +4,13 @@
             background-color: #EEF9BF;
         }
 
+        .cartinhas {
+            
+            
+            
+            flex-wrap: wrap;
+        }
+
         img {
             height: 100px;
             width: 100px;
@@ -65,5 +72,9 @@
         .card.virada .frente {
             transform: rotateY(-180deg);
           }
+
+        .idCard{
+            display: none;
+        }
 
         
