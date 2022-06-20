@@ -2,13 +2,10 @@
         body {
             font-family: 'Roboto', sans-serif;
             background-color: #EEF9BF;
-        }
-
-        .cartinhas {
-            
-            
-            
-            flex-wrap: wrap;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         img {
@@ -17,64 +14,96 @@
         }
 
         .topo {
+            height: 63px;
+            width: 540px;
             display: flex;
             justify-content: center;
         }
 
-        h1 {
+        span {
             height: 63px;
             width: 640px;
             font-size: 700;
-            font-size: 56px;
+            font-size: 50px;
             color: #75B79E;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .cartinhas {
+            
+            height: 500px;
+            margin: 0 120px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
         }
 
         .card {
             height: 146px;
             width: 117px;
             position: relative;
-            margin: 47px auto;
-        }
+            margin: 20px 40px;
+            cursor: pointer;
+          }
 
         .face {
             width: 100%;
             height: 100%;
-            background-color: #A7E9AF;
+            background-color: #a7e9af;
+            border: 1px solid #99cea8;
             border-radius: 5px;
+          
             display: flex;
             align-items: center;
             justify-content: center;
+          
             position: absolute;
-            transition: all .5s;
             backface-visibility: hidden;
+            transition: all 0.5s;
             transform-style: preserve-3d;
         }
         
-        .virarada.frente {
-            
-        } 
-
         .back-face {
-            width: 100%;
-            height: 100%;
-            background-color: #A7E9AF;
-            border-radius: 5px;
-            display: flex;
-            align-items: center;
-            justify-content: center; 
             transform: rotateY(180deg);
         }
 
-        .card.virada .back-face {
-            transform: rotateY(0deg);
-          }
-        
         .card.virada .frente {
             transform: rotateY(-180deg);
-          }
+        }
+        
+        .card.virada .back-face {
+            transform: rotateY(0deg);
+        }
 
         .idCard{
             display: none;
         }
 
-        
+
+@media (max-width: 600px){
+
+    .topo {
+        height: 100%;
+        width: 100%;
+        margin: 40px 40px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .cartinhas{
+        height: 100%;
+        width: 100%;
+        flex-direction: column;
+        margin-top: 20px;
+        align-items: center;
+    }
+
+    span {
+        height: 63px;
+        width: 312px;
+        font-size: 36px;
+        text-align: center;
+    }
+}
