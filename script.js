@@ -42,7 +42,6 @@ function comparador() {
 function selecionar(elemento) {
   
   let cardSelecionados = document.querySelectorAll(".card.virada.errado");
-  
   cont++;
   
     if(cardSelecionados.length <= 1){
@@ -71,6 +70,8 @@ function selecionar(elemento) {
   function terminou(){
     let cardCorretos = document.querySelectorAll(".card.virada");
     if(cardCorretos.length === cartas.length){
-    alert(`Parabéns! Você ganhou em ${cont} jogadas!`);
+      setTimeout(() =>{ 
+      alert(`Parabéns! Você ganhou em ${cont} jogadas!`)
+      }, 1000);
     }
   }
